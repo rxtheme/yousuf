@@ -1,8 +1,29 @@
 "use client"
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { FaGithub } from "react-icons/fa";
+import { GoRepoForked } from "react-icons/go";
+import { IoStarOutline } from "react-icons/io5";
 import NameEffect from "./NameEffect";
 
 const Header = () => {
+    const [repoData, setRepoData] = useState(null);
+
+  useEffect(() => {
+    const fetchRepoData = async () => {
+      try {
+        const response = await fetch('https://api.github.com/repos/rxtheme/yousuf');
+        const data = await response.json();
+        setRepoData(data);
+      } catch (error) {
+        console.error('Error fetching repository data:', error);
+      }
+    };
+
+    fetchRepoData();
+  }, []);
+console.log('repo data: ', repoData);
+   
    return (
       <header className="fixed w-full z-50">
 
@@ -13,19 +34,41 @@ const Header = () => {
                   <div>
                      <Link href="/"><NameEffect /></Link>
                   </div>
-              <div className="flex gap-x-2">
+              <div className="flex items-center gap-x-2">
                  <Link href="/">Projects</Link >
-                     <Link
-                        href={{
-                              pathname: 'https://github.com/yousufislamme',
-                        }}
-                     >Github</Link >
                  <Link href="https://www.linkedin.com/in/md-yousuf-islam/">Linkdin</Link >
+                     <Link
+                        target="_blank"
+                        className="flex"
+                        href={{
+                              pathname: 'https://github.com/rxtheme/yousuf',
+                        }}
+                     >
+                        <div className=" flex items-center">
+                           <div>
+                               <FaGithub className="text-2xl w-10" />
+                           </div>
+                           <div>
+                                                     <div className="">
+                              <p className="text-xs">yousufislamme/yousuf</p>
+                           </div>
+                           <div className="flex flex-row gap-3 items-center text-xs">
+                                 <p className="flex gap-1 justify-center items-center hover:font-semibold transition-all duration-150 ease-in-out"><IoStarOutline />{repoData && (repoData.stargazers_count)}</p>
+                                 <p className="flex gap-1 justify-center items-center hover:font-semibold transition-all duration-150 ease-in-out"><GoRepoForked />{repoData && (repoData.forks_count)}</p>
+                           </div>
+     </div>
+                        </div>
+
+                        
+
+                        
+                     </Link >
               </div>
          </div>
            
         </div>
     </div>
+
       </header>
   )
 }
