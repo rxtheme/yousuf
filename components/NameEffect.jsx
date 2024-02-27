@@ -35,7 +35,7 @@ const NameEffect = () => {
   };
 
   return (
-    <h1 className='text-xl font-extrabold'>
+    <h1 className='text-sm xl:text-xl font-extrabold'>
       {convertedString.split('').map((char, index) => (
         <span key={index} className={getColorClass()}>{char}</span>
       ))}
