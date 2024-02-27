@@ -50,7 +50,7 @@ const Hero = () => {
             height={700}
             draggable={false}
           />
-          <div className='container mx-auto xl:px-20'>
+          <div className='container mx-auto px-5 xl:px-20'>
 
          
 
