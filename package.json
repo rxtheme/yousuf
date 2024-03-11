@@ -1,7 +1,13 @@
 {
   "name": "yousuf",
   "version": "0.1.0",
-  "private": true,
+    "keywords": [
+    "Md Yousuf",
+    "Yousuf",
+    "its md yousuf",
+    "md yousuf portfolio",
+    "md yousuf github"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
