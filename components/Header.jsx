@@ -22,7 +22,6 @@ const Header = () => {
 
     fetchRepoData();
   }, []);
-console.log('repo data: ', repoData);
    
    return (
       <header className="fixed w-full z-50">
@@ -34,7 +33,7 @@ console.log('repo data: ', repoData);
                   <div>
                      <Link href="/"><NameEffect /></Link>
                   </div>
-              <div className="flex items-center gap-x-2">
+              <div className="md:flex hidden items-center gap-x-2">
                  <Link href="/">Projects</Link >
                  <Link href="https://www.linkedin.com/in/md-yousuf-islam/">Linkdin</Link >
                      <Link

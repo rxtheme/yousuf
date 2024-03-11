@@ -39,11 +39,11 @@ const Hero = () => {
 
   return (
     <>
-              <div className="-z-50 ">
+              <div className=" ">
 
           <div className="flex justify-end w-full">
             <Image
-              className="fixed"
+              className="fixed -z-50"
               src={BackgroundImg}
               alt="Picture of the author"
               width={700}
@@ -57,7 +57,7 @@ const Hero = () => {
     <div className='mt-20 grid grid-cols-1 lg:grid-cols-4 gap-4'>
       <div className='col-span-1 md:h-screen'>
 
-      <div className='sm:flex sm:justify-center sm:flex-col sm:px-5'>
+      <div className='sm:flex sm:justify-center sm:flex-col px-5'>
                                   <img className=' border-2 border-purple-500 rounded-full w-20 h-20 lg:w-32 lg:h-32 xl:w-40 xl:h-40' src={githubProfile} alt="Md Yousuf" />
         <div className='mt-2 leading-3'>
                     <h1 className='text-xl font-semibold '>Md Yousuf</h1>
