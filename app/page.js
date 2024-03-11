@@ -12,7 +12,7 @@ export default function Home() {
 
       <Hero />
       <Footer />
-      As a Senior Front-End Web Application Developer in React js & Next js I build your Business next level. Fully optimize and modern look to see.
+
 
 
     </main>

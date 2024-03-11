@@ -41,7 +41,7 @@ const Hero = () => {
     <>
               <div className=" ">
 
-          <div className="flex justify-end w-full">
+          <div className=" justify-end flex w-full">
             <Image
               className="fixed -z-50"
               src={BackgroundImg}
