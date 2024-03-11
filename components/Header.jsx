@@ -4,11 +4,20 @@ import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { GoRepoForked } from "react-icons/go";
 import { IoStarOutline } from "react-icons/io5";
-import NameEffect from "./NameEffect";
+import { useCaseConverter } from 'texpanse';
 
 const Header = () => {
     const [repoData, setRepoData] = useState(null);
-
+   const originalString = "Md Yousuf";
+   const colors = ['text-blue-500', 'text-purple-500', 'text-yellow-500'];
+   
+   const { convertedString, colorClasses } = useCaseConverter(originalString, colors);
+   const renderConvertedString = (convertedString, colorClasses) => {
+   const colorClassesArray = colorClasses.trim().split(' ');
+      return convertedString.split('').map((char, index) => (
+         <span key={index} className={colorClassesArray[index % colorClassesArray.length]}>{char}</span>
+      ));
+   };
   useEffect(() => {
     const fetchRepoData = async () => {
       try {
@@ -31,9 +40,10 @@ const Header = () => {
                <div>
         <div className='flex justify-between items-center'>
                   <div>
-                     <Link href="/"><NameEffect /></Link>
+               <Link href='/'><h1 className="text-sm lg:text-xl font-semibold"> {renderConvertedString(convertedString, colorClasses)} </h1></Link>
+                     
                   </div>
-              <div className="md:flex hidden items-center gap-x-2">
+             <div className="md:flex hidden items-center gap-x-2">
                  <Link href="/">Projects</Link >
                  <Link href="https://www.linkedin.com/in/md-yousuf-islam/">Linkdin</Link >
                      <Link
