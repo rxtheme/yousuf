@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import BackgroundImg from "../public/background.png";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import CodeTemplate from "./CodeTemplate";
 
 const Hero = () => {
   const words = `As a front-end developer, I can create any type of website as per your requirements. I will grow your company or Business 3x with next-generation front-end design and SEO. I always love to learn new things. I always keep browser compatibility & analytics in mind.
@@ -73,7 +72,6 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="flex justify-end items-center mt-10">
-                  <CodeTemplate />
                 </div>
               </div>
             </div>
