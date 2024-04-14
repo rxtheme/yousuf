@@ -5,7 +5,6 @@ import { FaGithub } from "react-icons/fa";
 import { GoRepoForked } from "react-icons/go";
 import { IoStarOutline } from "react-icons/io5";
 import { useCaseConverter } from "texpanse";
-import { ThemeSwitcher } from "./theme-switch";
 
 const Header = () => {
   const [repoData, setRepoData] = useState(null);
@@ -56,7 +55,6 @@ const Header = () => {
               </Link>
             </div>
             <div className="hidden items-center gap-x-2 md:flex">
-              <ThemeSwitcher />
               <Link href="/projects">Projects</Link>
               <Link href="https://www.linkedin.com/in/md-yousuf-islam/">
                 Linkdin
