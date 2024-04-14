@@ -12,11 +12,9 @@ export default function RootLayout({ children }) {
     <html lang="en" >
       <body className={inter.className}>
         <NextUIProvider>
-          <NextThemesProvider attribute="class" defaultTheme="dark">
-            <Header />
-            {children}
-            <Footer />
-          </NextThemesProvider>
+          <Header />
+          {children}
+          <Footer />
         </NextUIProvider>
       </body>
     </html>
