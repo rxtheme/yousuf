@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import BackgroundImg from "../public/background.png";
+import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Hero = () => {
@@ -35,7 +36,7 @@ const Hero = () => {
   return (
     <>
       <div className=" ">
-        <div className=" justify-end flex w-full">
+        <div className=" flex w-full justify-end">
           <Image
             className="fixed -z-50"
             src={BackgroundImg}
@@ -45,18 +46,18 @@ const Hero = () => {
             draggable={false}
           />
           <div className="container mx-auto px-5 xl:px-20">
-            <div className="mt-20 grid grid-cols-1 lg:grid-cols-4 gap-4">
-              <div className="col-span-1 md:h-screen">
-                <div className="sm:flex sm:justify-center sm:flex-col px-5">
+            <div className="mt-20 grid grid-cols-1 gap-4 lg:grid-cols-4">
+              <div className="col-span-1">
+                <div className="px-5 sm:flex sm:flex-col sm:justify-center">
                   <img
-                    className=" border-2 border-purple-500 rounded-full w-20 h-20 lg:w-32 lg:h-32 xl:w-40 xl:h-40"
+                    className=" h-20 w-20 rounded-full border-2 border-purple-500 lg:h-32 lg:w-32 xl:h-40 xl:w-40"
                     src={githubProfile}
                     alt="Md Yousuf"
                   />
                   <div className="mt-2 leading-3">
                     <h1 className="text-xl font-semibold ">Md Yousuf</h1>
                   </div>
-                  <span className="text-sm mb-2">yousufislamme</span>
+                  <span className="mb-2 text-sm">yousufislamme</span>
                   <hr />
                   <p className="mt-2">
                     Front-End Web Application Developer. I Love 💜 JavaScript🧠
@@ -65,13 +66,14 @@ const Hero = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-span-3 border lg:h-screen">
-                <div className="flex justify-center items-center">
-                  <div className="px-5 mt-10">
+              <div className="col-span-3 border  ">
+                <div className="flex items-start justify-center lg:items-center">
+                  <div className="mt-10 px-5">
                     <TextGenerateEffect words={words} />
+                    <div className="mt-20">
+                      <Showcase />
+                    </div>
                   </div>
-                </div>
-                <div className="flex justify-end items-center mt-10">
                 </div>
               </div>
             </div>
