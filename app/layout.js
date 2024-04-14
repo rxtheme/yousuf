@@ -13,9 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en" >
       <body className={inter.className}>
         <NextUIProvider>
-          <Header />
-          {children}
-          <Footer />
+          <NextThemesProvider>
+            <Header />
+            {children}
+            <Footer />
+          </NextThemesProvider>
         </NextUIProvider>
       </body>
     </html>
