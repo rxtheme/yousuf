@@ -1,6 +1,4 @@
 "use client";
-
-import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { NextUIProvider } from "@nextui-org/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
