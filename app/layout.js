@@ -1,6 +1,6 @@
 "use client";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 import { NextUIProvider } from "@nextui-org/react";
 import { Inter } from "next/font/google";
 import "./globals.css";
