@@ -1,4 +1,6 @@
 "use client";
+import { Button } from "@nextui-org/react";
+import confetti from "canvas-confetti";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import BackgroundImg from "../public/background.png";
@@ -6,6 +8,13 @@ import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 
 const Hero = () => {
+  const handleConfetti = () => {
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+  };
   const words = `As a front-end developer, I can create any type of website as per your requirements. I will grow your company or Business 3x with next-generation front-end design and SEO. I always love to learn new things. I always keep browser compatibility & analytics in mind.
 `;
   const originalString = "MD. Yousuf";
@@ -70,6 +79,16 @@ const Hero = () => {
                 <div className="flex items-start justify-center lg:items-center">
                   <div className="mt-10 px-5">
                     <TextGenerateEffect words={words} />
+                    <div className="mt-10 flex items-center justify-center">
+                      <Button
+                        disableRipple
+                        className="relative overflow-visible rounded-full bg-green-500/30 px-12 shadow-xl after:absolute after:inset-0 after:z-[-1] after:rounded-full after:bg-green-500/40 after:transition after:!duration-500 after:content-[''] hover:-translate-y-1 hover:after:scale-150 hover:after:opacity-0"
+                        size="md"
+                        onPress={handleConfetti}
+                      >
+                        Hire me
+                      </Button>
+                    </div>
                     <div className="mt-20">
                       <Showcase />
                     </div>
