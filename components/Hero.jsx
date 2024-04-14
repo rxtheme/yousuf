@@ -77,7 +77,7 @@ const Hero = () => {
               </div>
               <div className="col-span-3 border  ">
                 <div className="flex items-start justify-center lg:items-center">
-                  <div className="mt-10 px-5">
+                  <div className="mt-10 px-5 text-black dark:text-white">
                     <TextGenerateEffect words={words} />
                     <div className="mt-10 flex items-center justify-center">
                       <Button

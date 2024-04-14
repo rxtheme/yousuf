@@ -1,31 +1,12 @@
 "use client";
-import { useCaseConverter } from "texpanse";
 
 const Footer = () => {
-  const originalString = "Y-Network";
-  const colors = ["text-pink-400", "text-blue-400"];
-  const { convertedString, colorClasses } = useCaseConverter(
-    originalString,
-    colors,
-  );
+  const originalString = " Y-Network";
 
-  const renderConvertedString = (convertedString, colorClasses) => {
-    const colorClassesArray = colorClasses.trim().split(" ");
-    return convertedString.split("").map((char, index) => (
-      <span
-        key={index}
-        className={colorClassesArray[index % colorClassesArray.length]}
-      >
-        {char}
-      </span>
-    ));
-  };
   return (
-    <div className="flex items-center justify-center">
+    <div className="container mx-auto flex items-center justify-center px-5">
       <p>Copyright &copy; {new Date().getFullYear()} yousuf.vercel.app | </p>
-      <p className="overflow-hidden">
-        {renderConvertedString(convertedString, colorClasses)}
-      </p>
+      <p className="overflow-hidden"> {originalString}</p>
     </div>
   );
 };
