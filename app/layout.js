@@ -1,6 +1,4 @@
 "use client";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 
