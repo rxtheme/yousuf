@@ -1,7 +1,7 @@
 const Status = ({ text }) => {
   return (
     <div className="flex items-center gap-1">
-      {text && <span className="mr-2 text-xs">Less</span>}
+      {text && <span className="mr-2 text-xs dark:text-white">Less</span>}
       <div className="size-[10px] rounded-sm bg-gray-300"></div>
       <div className="size-[10px] rounded-sm bg-[#9be9a8]"></div>
       <div className="size-[10px] rounded-sm bg-[#40c463]"></div>

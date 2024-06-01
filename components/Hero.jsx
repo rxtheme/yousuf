@@ -3,10 +3,14 @@ import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import CodeTemplate from "../components/CodeTemplate";
 import BackgroundImg from "../public/background.png";
 import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-
+export const metadata = {
+  title: "Its Md Yousuf",
+  description: "welcome to webaidpro",
+};
 const Hero = () => {
   const handleConfetti = () => {
     confetti({
@@ -64,9 +68,11 @@ const Hero = () => {
                     alt="Md Yousuf"
                   />
                   <div className="mt-2 leading-3">
-                    <h1 className="text-xl font-semibold ">Md Yousuf</h1>
+                    <h1 className="text-xl font-semibold ">
+                      <span className="text-gray-400">Its</span> Md Yousuf
+                    </h1>
                   </div>
-                  <span className="mb-2 text-sm">yousufislamme</span>
+                  <h2 className="mb-2 text-sm">@yousufislamme</h2>
                   <hr />
                   <p className="mt-2">
                     Front-End Web Application Developer. I Love 💜 JavaScript🧠
@@ -78,7 +84,10 @@ const Hero = () => {
               <div className="col-span-3 border  ">
                 <div className="flex items-start justify-center lg:items-center">
                   <div className="mt-10 px-5 text-black dark:text-white">
-                    <TextGenerateEffect words={words} />
+                    <TextGenerateEffect
+                      className="dark:text-white"
+                      words={words}
+                    />
                     <div className="mt-10 flex items-center justify-center">
                       <Button
                         disableRipple
@@ -91,6 +100,9 @@ const Hero = () => {
                     </div>
                     <div className="mt-20">
                       <Showcase />
+                    </div>
+                    <div className="mb-5">
+                      <CodeTemplate />
                     </div>
                   </div>
                 </div>

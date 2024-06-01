@@ -12,7 +12,6 @@ import { FaGithub } from "react-icons/fa";
 import { GoRepoForked } from "react-icons/go";
 import { IoStarOutline } from "react-icons/io5";
 import { useCaseConverter } from "texpanse";
-import { ThemeSwitcher } from "./theme-switch";
 
 const Header = () => {
   const [repoData, setRepoData] = useState(null);
@@ -63,7 +62,6 @@ const Header = () => {
               </Link>
             </div>
             <div className=" flex items-center gap-x-2">
-              <ThemeSwitcher />
               <Link className="hidden sm:block" href="/projects">
                 Projects
               </Link>

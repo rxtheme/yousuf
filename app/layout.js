@@ -11,13 +11,12 @@ const inter = Inter({ subsets: ["latin"] });
 export default function RootLayout({ children }) {
   return (
     <html lang="en" >
+
       <body className={inter.className}>
         <NextUIProvider>
-          <NextThemesProvider>
-            <Header />
-            {children}
-            <Footer />
-          </NextThemesProvider>
+          <Header />
+          {children}
+          <Footer />
         </NextUIProvider>
       </body>
     </html>
