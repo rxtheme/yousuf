@@ -58,7 +58,10 @@ const Hero = () => {
       <div className='col-span-1 md:h-screen'>
 
       <div className='sm:flex sm:justify-center sm:flex-col sm:px-5'>
-                                  <img className=' border-2 border-purple-500 rounded-full w-20 h-20 lg:w-32 lg:h-32 xl:w-40 xl:h-40' src={githubProfile} alt="Md Yousuf" />
+                                  <Image className=' border-2 border-purple-500 rounded-full w-20 h-20 lg:w-32 lg:h-32 xl:w-40 xl:h-40' src={githubProfile}             alt="Its Md Yousuf"
+            width={400}
+            height={400}
+            draggable={false}/>
         <div className='mt-2 leading-3'>
                     <h1 className='text-xl font-semibold '>Md Yousuf</h1>
                   </div>
