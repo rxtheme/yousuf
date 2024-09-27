@@ -4,8 +4,8 @@ export const metadata = {
 };
 const Projects = () => {
   return (
-    <div className="pt-20">
-      <h1>Projects</h1>
+    <div className="container px-10 pt-20">
+      <h1 className="text-2xl">Projects</h1>
     </div>
   );
 };
