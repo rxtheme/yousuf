@@ -1,3 +1,5 @@
+import { Timeline } from "@/components/ui/timeline";
+
 export const metadata = {
   title: "Products",
   description: "welcome to Products page.",
@@ -5,7 +7,7 @@ export const metadata = {
 const Projects = () => {
   return (
     <div className="container px-10 pt-20">
-      <h1 className="text-2xl">Projects</h1>
+      <Timeline />
     </div>
   );
 };

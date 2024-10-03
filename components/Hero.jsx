@@ -91,7 +91,7 @@ const Hero = () => {
                     <div className="mt-10 flex items-center justify-center">
                       <Button
                         disableRipple
-                        className="relative overflow-visible rounded-full bg-green-500/30 px-12 shadow-xl after:absolute after:inset-0 after:z-[-1] after:rounded-full after:bg-green-500/40 after:transition after:!duration-500 after:content-[''] hover:-translate-y-1 hover:after:scale-150 hover:after:opacity-0"
+                        className="relative overflow-visible rounded-full bg-green-500/30 px-12 py-2 shadow-xl after:absolute after:inset-0 after:z-[-1] after:rounded-full after:bg-green-500/40 after:transition after:!duration-500 after:content-[''] hover:-translate-y-1 hover:after:scale-150 hover:after:opacity-0"
                         size="md"
                         onPress={handleConfetti}
                       >
