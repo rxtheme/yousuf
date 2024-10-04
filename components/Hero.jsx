@@ -3,7 +3,6 @@ import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import CodeTemplate from "../components/CodeTemplate";
 import BackgroundImg from "../public/background.png";
 import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
@@ -100,9 +99,6 @@ const Hero = () => {
                     </div>
                     <div className="mt-20">
                       <Showcase />
-                    </div>
-                    <div className="mb-5">
-                      <CodeTemplate />
                     </div>
                   </div>
                 </div>

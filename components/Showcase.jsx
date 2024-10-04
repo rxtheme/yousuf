@@ -20,6 +20,8 @@ const Showcase = () => {
         <Skills languageName="MongoDB" />
         <Skills languageName="React.js" />
         <Skills languageName="Next.js" />
+        <Skills languageName="WordPress" />
+        <Skills languageName="PHP" />
       </div>
     </section>
   );
