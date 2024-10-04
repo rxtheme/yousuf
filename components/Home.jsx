@@ -1,15 +1,13 @@
 "use client";
+import BackgroundImg from "@/public/background.png";
 import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import BackgroundImg from "../public/background.png";
 import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-export const metadata = {
-  title: "Its Md Yousuf",
-  description: "welcome to webaidpro",
-};
+
 const Hero = () => {
   const handleConfetti = () => {
     confetti({
@@ -47,18 +45,18 @@ const Hero = () => {
   };
   return (
     <>
-      <div className=" ">
+      <div className="">
         <div className=" flex w-full justify-end">
           <Image
             className="fixed -z-50"
             src={BackgroundImg}
             alt="Picture of the author"
-            width={700}
-            height={700}
+            width={1000}
+            height={1000}
             draggable={false}
           />
-          <div className="container mx-auto px-5 xl:px-20">
-            <div className="mt-20 grid grid-cols-1 gap-4 lg:grid-cols-4">
+          <div className="container mx-auto px-5 pt-20   xl:px-20">
+            <div className=" grid grid-cols-1 gap-4 lg:grid-cols-4">
               <div className="col-span-1">
                 <div className="px-5 sm:flex sm:flex-col sm:justify-center">
                   <img
@@ -71,7 +69,13 @@ const Hero = () => {
                       <span className="text-gray-400">Its</span> Md Yousuf
                     </h1>
                   </div>
-                  <h2 className="mb-2 text-sm">@yousufislamme</h2>
+                  <Link
+                    href="https://github.com/yousufislamme/"
+                    className="mb-2 text-sm duration-150 ease-in hover:underline"
+                    target="_blank"
+                  >
+                    @yousufislamme
+                  </Link>
                   <hr />
                   <p className="mt-2">
                     Front-End Web Application Developer. I Love 💜 JavaScript🧠

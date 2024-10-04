@@ -14,7 +14,9 @@ export default function RootLayout({ children }) {
 
       <body className={inter.className}>
         <NextUIProvider>
-          <Header />
+          <div className=" ">
+            <Header />
+          </div>
           {children}
           <Footer />
         </NextUIProvider>
