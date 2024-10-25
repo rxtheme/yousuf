@@ -1,9 +1,9 @@
 "use client";
+import { LinkPreview } from "@/components/ui/link-preview";
 import BackgroundImg from "@/public/background.png";
 import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
@@ -69,13 +69,15 @@ const Hero = () => {
                       <span className="text-gray-400">Its</span> Md Yousuf
                     </h1>
                   </div>
-                  <Link
+                  <button
                     href="https://github.com/yousufislamme/"
-                    className="mb-2 text-sm duration-150 ease-in hover:underline"
+                    className="mb-2 text-left text-sm duration-150 ease-in hover:underline"
                     target="_blank"
                   >
-                    @yousufislamme
-                  </Link>
+                    <LinkPreview url="https://github.com/yousufislamme">
+                      @yousufislamme
+                    </LinkPreview>
+                  </button>
                   <hr />
                   <p className="mt-2">
                     Front-End Web Application Developer. I Love 💜 JavaScript🧠
