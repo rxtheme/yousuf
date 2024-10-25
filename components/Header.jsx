@@ -67,7 +67,7 @@ const Header = () => {
               </Link>
               <Link
                 className="hidden sm:block"
-                href="https://www.linkedin.com/in/md-yousuf-islam/"
+                href="https://www.linkedin.com/in/its-md-yousuf"
               >
                 Linkdin
               </Link>
