@@ -5,10 +5,13 @@ import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { SiUpwork } from "react-icons/si";
+import { TbBrandFiverr } from "react-icons/tb";
+
 import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-
 const Hero = () => {
+  const [isOpenMarketplace, setIsOpenMarketplace] = useState(false);
   const handleConfetti = () => {
     confetti({
       particleCount: 100,
@@ -42,6 +45,12 @@ const Hero = () => {
       }
     }
     return convertedString;
+  };
+
+  // toggle handler for showing marketplace.
+  const handleShowMarketplace = (e) => {
+    setIsOpenMarketplace(!isOpenMarketplace);
+    console.log("show me");
   };
   return (
     <>
@@ -93,15 +102,29 @@ const Hero = () => {
                       className="dark:text-white"
                       words={words}
                     />
-                    <div className="mt-10 flex items-center justify-center">
+                    <div className="mt-10 flex flex-col items-center justify-center">
                       <Button
                         disableRipple
                         className="relative overflow-visible rounded-full bg-green-500/30 px-12 py-2 shadow-xl after:absolute after:inset-0 after:z-[-1] after:rounded-full after:bg-green-500/40 after:transition after:!duration-500 after:content-[''] hover:-translate-y-1 hover:after:scale-150 hover:after:opacity-0"
                         size="md"
                         onPress={handleConfetti}
+                        onClick={handleShowMarketplace}
                       >
                         Hire me
                       </Button>
+                      {isOpenMarketplace && (
+                        <div className="mt-5 flex gap-5">
+                          <a
+                            href="https://www.upwork.com/freelancers/yousufislam9?mp_source=share"
+                            className="flex items-center gap-2 rounded-full bg-green-600 px-10 py-2 shadow-inner  "
+                          >
+                            <SiUpwork className="text-lg" /> UpWork
+                          </a>
+                          <button className="flex gap-2 rounded-full bg-green-600 px-5 py-2">
+                            <TbBrandFiverr className="text-lg" /> Fiverr
+                          </button>
+                        </div>
+                      )}
                     </div>
                     <div className="mt-20">
                       <Showcase />
