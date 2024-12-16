@@ -1,16 +1,19 @@
 import Status from "./Status";
 import Skills from "./skills";
-
 const Showcase = () => {
   return (
     <section>
       <div className="flex justify-between">
-        <h2 className=" mb-2 text-xl font-extralight">Skills: </h2>
-        <div className=" ">
+        <a href="#skills">
+          <h4 id="skills" className="mb-2 pt-20 text-xl font-semibold">
+            Skills:
+          </h4>
+        </a>
+        <div className="pt-20">
           <Status text={true} />
         </div>
       </div>
-      <div className="mb-10 grid grid-cols-2 justify-items-center gap-5 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+      <div className="mb-10 flex flex-wrap  justify-items-center gap-5 ">
         <Skills languageName="JavaScript" />
         <Skills languageName="HTML" />
         <Skills languageName="CSS" />

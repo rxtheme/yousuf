@@ -64,7 +64,7 @@ const Hero = () => {
             height={1000}
             draggable={false}
           />
-          <div className="container mx-auto px-5 pt-20   xl:px-20">
+          <div className="container mx-auto px-5 pt-20 xl:px-20">
             <div className=" grid grid-cols-1 gap-4 lg:grid-cols-4">
               <div className="col-span-1">
                 <div className="px-5 sm:flex sm:flex-col sm:justify-center">

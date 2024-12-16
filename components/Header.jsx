@@ -102,7 +102,7 @@ const Header = () => {
                 </div>
               </Link>
               <div className="sm:hidden">
-                <Dropdown>
+                <Dropdown className="mt-2 min-w-52 rounded-lg bg-purple-100 shadow-lg ">
                   <DropdownTrigger>
                     <Button variant="bordered">Open Menu</Button>
                   </DropdownTrigger>

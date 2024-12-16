@@ -30,8 +30,8 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact-me" className="pt-20">
-      <div className="shadow-input mx-auto my-10 w-full max-w-md rounded-none bg-white p-4 dark:bg-black md:rounded-2xl md:p-8 ">
+    <div id="contact-me" className=" pt-20">
+      <div className="shadow-input mx-auto my-10 w-full max-w-md rounded-none border-2 bg-white/30 p-4 dark:bg-black md:rounded-2xl md:p-8 ">
         <h2 className="text-xl font-bold text-neutral-800 dark:text-neutral-200">
           Contact Me
         </h2>
