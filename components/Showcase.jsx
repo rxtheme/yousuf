@@ -5,11 +5,12 @@ const Showcase = () => {
     <section>
       <div className="flex justify-between">
         <a href="#skills">
-          <h4 id="skills" className="mb-2 pt-20 text-xl font-semibold">
+          <span className="absolute left-0 h-7 w-2 rounded-br-md rounded-tr-md bg-gray-400"></span>
+          <h4 id="skills" className=" mb-5 text-xl font-semibold">
             Skills:
           </h4>
         </a>
-        <div className="pt-20">
+        <div className="">
           <Status text={true} />
         </div>
       </div>

@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { SiUpwork } from "react-icons/si";
 import { TbBrandFiverr } from "react-icons/tb";
 
+import Features from "./Features";
 import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 const Hero = () => {
@@ -95,7 +96,7 @@ const Hero = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-span-3 border  ">
+              <div className="relative col-span-3 border  ">
                 <div className="flex items-start justify-center lg:items-center">
                   <div className="mt-10 px-5 text-black dark:text-white">
                     <TextGenerateEffect
@@ -129,6 +130,7 @@ const Hero = () => {
                     <div className="mt-20">
                       <Showcase />
                     </div>
+                    <Features />
                   </div>
                 </div>
               </div>
