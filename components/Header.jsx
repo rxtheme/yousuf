@@ -1,11 +1,5 @@
 "use client";
-import {
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-} from "@nextui-org/react";
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
@@ -105,29 +99,7 @@ const Header = () => {
                 </div>
               </Link>
               <div className="sm:hidden">
-                <Dropdown className="mt-2 min-w-52 rounded-lg bg-purple-100 shadow-lg ">
-                  <DropdownTrigger>
-                    <Button variant="bordered">Open Menu</Button>
-                  </DropdownTrigger>
-                  <DropdownMenu aria-label="Static Actions">
-                    <DropdownItem key="projects">
-                      <Link
-                        className="inline-block h-full w-full p-1"
-                        href="/projects"
-                      >
-                        Projects
-                      </Link>
-                    </DropdownItem>
-                    <DropdownItem key="linkdin">
-                      <Link
-                        className="inline-block h-full w-full p-1"
-                        href="https://www.linkedin.com/in/md-yousuf-islam/"
-                      >
-                        Linkdin
-                      </Link>
-                    </DropdownItem>
-                  </DropdownMenu>
-                </Dropdown>
+                <p>mobile menu coming soon!</p>
               </div>
             </div>
           </div>

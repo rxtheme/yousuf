@@ -12,7 +12,7 @@ const Experience = ({
   githubLink,
 }) => {
   return (
-    <div className=" ">
+    <div>
       {/* contents */}
       <div>
         <p className="text-green-400">Featured Project</p>
@@ -23,10 +23,10 @@ const Experience = ({
 
       {/* Description */}
       <div className="mb-5">
-        <div className="relative z-20 mt-10 flex h-60 w-full justify-between   ">
-          <div className="flex h-[265px] flex-col justify-end ">
+        <div className="z-20 mt-10 flex w-full flex-col-reverse justify-between lg:relative lg:h-60">
+          <div className="flex flex-col justify-end  lg:h-[265px] lg:flex-col ">
             <p
-              className={`absolute ${descLeftOrRight}-0 top-10 z-10  w-2/3  rounded-lg bg-purple-700/30 p-5 text-white backdrop-blur-md`}
+              className={`lg:absolute ${descLeftOrRight}-0 top-10 z-10 mb-5  rounded-lg  bg-purple-700/30 p-5 text-white backdrop-blur-md lg:w-2/3`}
             >
               A web app for visualizing personalized Spotify data. View your top
               artists, top tracks, recently played tracks, and detailed audio
@@ -46,7 +46,7 @@ const Experience = ({
 
           {/* Image */}
           <div
-            className={`absolute ${imgLeftOrRight}-0 top-0 -z-10  w-2/5 rounded-ss-xl bg-gray-200/60 pl-5 pt-5`}
+            className={`lg:absolute ${imgLeftOrRight}-0 top-0 -z-10  rounded-ss-xl bg-gray-200/60 pl-5 pt-5 lg:w-2/5`}
           >
             <Image
               layout="responsive"
@@ -56,7 +56,7 @@ const Experience = ({
               width={400}
             />
           </div>
-          <span className="size-64 rounded-full bg-purple-500/50 blur-3xl drop-shadow-xl"></span>
+          <span className="hidden size-64 rounded-full bg-purple-500/50 blur-3xl drop-shadow-xl lg:block"></span>
           <span></span>
         </div>
       </div>

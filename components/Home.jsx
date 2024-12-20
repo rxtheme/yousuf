@@ -1,7 +1,6 @@
 "use client";
 import { LinkPreview } from "@/components/ui/link-preview";
 import BackgroundImg from "@/public/background.png";
-import { Button } from "@nextui-org/react";
 import confetti from "canvas-confetti";
 import Image from "next/image";
 import { useEffect, useState } from "react";
@@ -57,7 +56,7 @@ const Hero = () => {
   };
   return (
     <>
-      <div className="">
+      <div>
         <div className=" flex w-full justify-end">
           <Image
             className="fixed -z-50"
@@ -98,7 +97,7 @@ const Hero = () => {
                   </p>
                 </div>
               </div>
-              <div className="relative col-span-3 border  ">
+              <div className="relative col-span-3 border px-2 ">
                 <div className="flex items-start justify-center lg:items-center">
                   <div className="mt-10 px-5 text-black dark:text-white">
                     <TextGenerateEffect
@@ -106,7 +105,7 @@ const Hero = () => {
                       words={words}
                     />
                     <div className="mt-10 flex flex-col items-center justify-center">
-                      <Button
+                      <button
                         disableRipple
                         className="relative overflow-visible rounded-full bg-green-500/30 px-12 py-2 shadow-xl after:absolute after:inset-0 after:z-[-1] after:rounded-full after:bg-green-500/40 after:transition after:!duration-500 after:content-[''] hover:-translate-y-1 hover:after:scale-150 hover:after:opacity-0"
                         size="md"
@@ -114,7 +113,7 @@ const Hero = () => {
                         onClick={handleShowMarketplace}
                       >
                         Hire me
-                      </Button>
+                      </button>
                       {isOpenMarketplace && (
                         <div className="mt-5 flex gap-5">
                           <a
