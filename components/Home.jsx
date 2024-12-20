@@ -8,9 +8,11 @@ import { useEffect, useState } from "react";
 import { SiUpwork } from "react-icons/si";
 import { TbBrandFiverr } from "react-icons/tb";
 
+import ContactMini from "./ContactMini";
 import Features from "./Features";
 import Showcase from "./Showcase";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
+import WorkExperience from "./Work Experience/WorkExperience";
 const Hero = () => {
   const [isOpenMarketplace, setIsOpenMarketplace] = useState(false);
   const handleConfetti = () => {
@@ -131,6 +133,12 @@ const Hero = () => {
                       <Showcase />
                     </div>
                     <Features />
+                    <div>
+                      <WorkExperience />
+                    </div>
+                    <div>
+                      <ContactMini />
+                    </div>
                   </div>
                 </div>
               </div>

@@ -43,6 +43,7 @@
     "texpanse": "^0.1.4"
   },
   "devDependencies": {
+    "@playwright/test": "^1.49.1",
     "@types/node": "20.12.7",
     "@types/react": "18.2.78",
     "autoprefixer": "^10.0.1",

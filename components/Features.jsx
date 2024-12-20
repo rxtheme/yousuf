@@ -1,6 +1,5 @@
 import {
   AlignVerticalJustifyStart,
-  ArrowRight,
   Code,
   Database,
   FlaskConical,
@@ -13,44 +12,44 @@ const Features = () => {
   return (
     <div className="py-20">
       <span className="absolute left-0 h-7 w-2 rounded-br-md rounded-tr-md bg-gray-400"></span>
-      <h3 className="mb-10 cursor-pointer text-xl font-semibold">What I Do</h3>
+      <a
+        id="what-i-do"
+        href="#what-i-do"
+        className="  cursor-pointer pt-20  text-xl font-semibold"
+      >
+        What I Do
+      </a>
       {/* Responsive Grid */}
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <Card
-          topIcon={<AlignVerticalJustifyStart />}
+          topIcon={<AlignVerticalJustifyStart size={32} />}
           title="Project Management"
           content="Want to gain real-life experience of managing a complete software project cycle."
-          rightIcon={<ArrowRight />}
         />
         <Card
-          topIcon={<Paintbrush />}
+          topIcon={<Paintbrush size={32} />}
           title="UI/UX Design"
           content="I strive to design user-friendly interfaces that are aesthetically pleasing."
-          rightIcon={<ArrowRight />}
         />
         <Card
-          topIcon={<Database />}
+          topIcon={<Database size={32} />}
           title="Backend Development"
           content="Building robust and scalable backend systems to support dynamic applications."
-          rightIcon={<ArrowRight />}
         />
         <Card
-          topIcon={<Code />}
+          topIcon={<Code size={32} />}
           title="Frontend Development"
           content="Creating interactive and responsive user interfaces for web applications."
-          rightIcon={<ArrowRight />}
         />
         <Card
-          topIcon={<Waypoints />}
+          topIcon={<Waypoints size={32} />}
           title="DevOps"
           content="Streamlining the development process with efficient CI/CD pipelines."
-          rightIcon={<ArrowRight />}
         />
         <Card
-          topIcon={<FlaskConical />}
+          topIcon={<FlaskConical size={32} />}
           title="Quality Assurance"
           content="Ensuring software quality through rigorous testing and debugging."
-          rightIcon={<ArrowRight />}
         />
       </div>
     </div>
