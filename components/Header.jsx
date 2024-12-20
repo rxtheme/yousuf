@@ -1,5 +1,6 @@
 "use client";
 
+import { Spiral as Hamburger } from "hamburger-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
@@ -8,6 +9,13 @@ import { IoStarOutline } from "react-icons/io5";
 import { useCaseConverter } from "texpanse";
 
 const Header = () => {
+  const [isOpen, setOpen] = useState(false);
+  const [menuToggle, setMenuToggle] = useState(false);
+
+  const handleToggleMenu = () => {
+    setMenuToggle((prev) => !prev);
+  };
+
   const [repoData, setRepoData] = useState(null);
   const originalString = "Md Yousuf";
   const colors = ["text-blue-500", "text-purple-500", "text-yellow-500"];
@@ -45,12 +53,12 @@ const Header = () => {
 
   return (
     <header className="fixed z-50 w-full">
-      <div className=" m-5  rounded-xl border-2 border-purple-500 bg-white/30 px-2 py-1 backdrop-blur-sm sm:px-5 sm:py-2">
+      <div className=" relative m-5 rounded-xl border-2 border-purple-500 bg-white/30 px-2 py-1 backdrop-blur-sm sm:px-5 sm:py-2">
         <div>
           <div className="flex items-center justify-between md:justify-between">
             <div>
               <Link href="/">
-                <h1 className="text-sm font-semibold lg:text-xl">
+                <h1 className="  text-sm font-semibold lg:text-xl">
                   {renderConvertedString(convertedString, colorClasses)}
                 </h1>
               </Link>
@@ -98,11 +106,23 @@ const Header = () => {
                   </div>
                 </div>
               </Link>
-              <div className="sm:hidden">
-                <p>mobile menu coming soon!</p>
+              <div
+                onClick={handleToggleMenu}
+                className="flex h-7 w-10 items-center justify-center sm:hidden"
+              >
+                <Hamburger size="30" toggled={isOpen} toggle={setOpen} />
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div
+        className={`${!menuToggle ? "hidden" : "block"} absolute right-5 top-16 w-[200px] rounded-md bg-green-200 px-5 py-3 shadow-lg `}
+      >
+        <div className="flex flex-col gap-3 font-semibold">
+          <Link href="/projects">Project</Link>
+          <Link href="/about">About</Link>
+          <Link href="/contact">Contact</Link>
         </div>
       </div>
     </header>
