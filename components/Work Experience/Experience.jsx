@@ -1,10 +1,15 @@
+"use client";
 import { Eye, Github } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+
 const Experience = ({
   ProjectName,
   descLeftOrRight,
   imgLeftOrRight,
   portfolioImg,
+  ProjectLiveLink,
+  githubLink,
 }) => {
   return (
     <div className=" ">
@@ -28,10 +33,14 @@ const Experience = ({
               information about each track. Create and save new playlists of
               recommended tracks based on your existing playlists and more.
             </p>
-            {/* icons */}
+            {/* icons & links */}
             <div className="flex w-auto cursor-pointer gap-2">
-              <Eye />
-              <Github />
+              <Link formtarget="_blank" href={ProjectLiveLink || "/"}>
+                <Eye />
+              </Link>
+              <Link formtarget="_blank" href={githubLink || "/"}>
+                <Github />
+              </Link>
             </div>
           </div>
 
@@ -40,6 +49,7 @@ const Experience = ({
             className={`absolute ${imgLeftOrRight}-0 top-0 -z-10  w-2/5 rounded-ss-xl bg-gray-200/60 pl-5 pt-5`}
           >
             <Image
+              layout="responsive"
               draggable="false"
               src={portfolioImg}
               height={300}

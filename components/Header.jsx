@@ -57,11 +57,14 @@ const Header = () => {
             <div>
               <Link href="/">
                 <h1 className="text-sm font-semibold lg:text-xl">
-                  {renderConvertedString(convertedString, colorClasses)}{" "}
+                  {renderConvertedString(convertedString, colorClasses)}
                 </h1>
               </Link>
             </div>
             <div className=" flex items-center gap-x-2">
+              <Link className="hidden sm:block" href="/about">
+                About
+              </Link>
               <Link className="hidden sm:block" href="/projects">
                 Projects
               </Link>

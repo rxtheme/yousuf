@@ -7,18 +7,13 @@ import {
   Waypoints,
 } from "lucide-react";
 import Card from "./Card";
+import TitleWithPath from "./TitleTitleWithPath";
 
 const Features = () => {
   return (
-    <div className="py-20">
-      <span className="absolute left-0 h-7 w-2 rounded-br-md rounded-tr-md bg-gray-400"></span>
-      <a
-        id="what-i-do"
-        href="#what-i-do"
-        className="  cursor-pointer pt-20  text-xl font-semibold"
-      >
-        What I Do
-      </a>
+    <div id="what-i-do" className="pb-10 pt-20">
+      <TitleWithPath children="What I Do:" hashTagName="#what-i-do" />
+
       {/* Responsive Grid */}
       <div className="mx-auto mt-10 grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <Card

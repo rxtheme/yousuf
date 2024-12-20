@@ -1,21 +1,34 @@
-import { FaFacebookF, FaGoogle, FaInstagram } from "react-icons/fa";
+"use client";
+import { Github, Instagram } from "lucide-react";
+import Link from "next/link";
+import { FaFacebookF, FaGoogle } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-
+import TitleWithPath from "./TitleTitleWithPath";
 const ContactMini = () => {
   return (
-    <div className="py-10">
-      <span className="absolute left-0 h-7 w-2 rounded-br-md rounded-tr-md bg-gray-400"></span>
-      <h2 className="text-xl font-semibold">Contact</h2>
+    <div id="contact" className="py-20">
+      <TitleWithPath children="Contact" hashTagName="#contact" />
       <p className="py-5">
         I'm currently looking to join a cross-functional team that values
         improving people's lives through accessible design. or have a project in
         mind? Let's connect. <br /> <br /> yousuf.okay@gmail.com
       </p>
-      <div className="flex gap-2">
-        <FaFacebookF />
-        <FaXTwitter />
-        <FaInstagram />
-        <FaGoogle />
+      <div className="flex items-center gap-2">
+        <Link href="https://www.facebook.com/its.md.yousuf">
+          <FaFacebookF className="text-xl" />
+        </Link>
+        <Link href="/">
+          <FaXTwitter className="text-xl" />
+        </Link>
+        <Link href="/">
+          <Instagram />
+        </Link>
+        <Link href="/">
+          <FaGoogle className="text-xl" />
+        </Link>
+        <Link href="/">
+          <Github />
+        </Link>
       </div>
     </div>
   );

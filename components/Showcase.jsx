@@ -1,16 +1,13 @@
 import Status from "./Status";
+import TitleWithPath from "./TitleTitleWithPath";
 import Skills from "./skills";
 const Showcase = () => {
   return (
     <section>
-      <div className="flex justify-between">
-        <a href="#skills">
-          <span className="absolute left-0 h-7 w-2 rounded-br-md rounded-tr-md bg-gray-400"></span>
-          <h4 id="skills" className=" mb-5 text-xl font-semibold">
-            Skills:
-          </h4>
-        </a>
-        <div className="">
+      <div id="skills" className="flex justify-between pt-20">
+        <TitleWithPath children="Skills:" hashTagName="#skills" />
+
+        <div>
           <Status text={true} />
         </div>
       </div>
