@@ -81,12 +81,12 @@ const Hero = () => {
                     </h1>
                   </div>
                   <button
-                    href="https://github.com/yousufislamme/"
+                    href="https://github.com/ItsMdYousuf/"
                     className="mb-2 text-left text-sm duration-150 ease-in hover:underline"
                     target="_blank"
                   >
-                    <LinkPreview url="https://github.com/yousufislamme">
-                      @yousufislamme
+                    <LinkPreview url="https://github.com/ItsMdYousuf">
+                      @ItsMdYousuf
                     </LinkPreview>
                   </button>
                   <hr />

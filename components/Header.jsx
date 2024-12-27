@@ -7,6 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { GoRepoForked } from "react-icons/go";
 import { IoStarOutline } from "react-icons/io5";
 import { useCaseConverter } from "texpanse";
+import LogoAnimation from "./AnimationLogo";
 
 const Header = () => {
   const [isOpen, setOpen] = useState(false);
@@ -53,14 +54,15 @@ const Header = () => {
 
   return (
     <header className="fixed z-50 w-full">
-      <div className=" relative m-5 rounded-xl border-2 border-purple-500 bg-white/30 px-2 py-1 backdrop-blur-sm sm:px-5 sm:py-2">
+      <div className=" relative m-3 rounded-xl border-2 border-purple-500 bg-white/30 px-2 py-1 backdrop-blur-sm sm:px-5 sm:py-2">
         <div>
           <div className="flex items-center justify-between md:justify-between">
-            <div>
+            <div className="">
               <Link href="/">
-                <h1 className="  text-sm font-semibold lg:text-xl">
+                {/* <h1 className="  text-sm font-semibold lg:text-xl">
                   {renderConvertedString(convertedString, colorClasses)}
-                </h1>
+                </h1> */}
+                <LogoAnimation />
               </Link>
             </div>
             <div className=" flex items-center gap-x-2">
@@ -90,7 +92,7 @@ const Header = () => {
                     </div>
                     <div>
                       <div className="">
-                        <p className="text-xs">yousufislamme/yousuf</p>
+                        <p className="text-xs">ItsMdYousuf/yousuf</p>
                       </div>
                       <div className="flex flex-row items-center gap-3 text-xs">
                         <p className="flex items-center justify-center gap-1 transition-all duration-150 ease-in-out hover:font-semibold">
@@ -117,7 +119,7 @@ const Header = () => {
         </div>
       </div>
       <div
-        className={`${!menuToggle ? "hidden" : "block"} absolute right-5 top-16 w-[200px] rounded-md bg-green-200 px-5 py-3 shadow-lg `}
+        className={`${!menuToggle ? "hidden" : "block"} top-18 absolute right-5 w-[200px] rounded-md bg-purple-200 px-5 py-3 shadow-lg `}
       >
         <div className="flex flex-col gap-3 font-semibold">
           <Link href="/projects">Project</Link>

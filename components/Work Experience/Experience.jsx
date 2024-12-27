@@ -56,8 +56,11 @@ const Experience = ({
               width={400}
             />
           </div>
-          <span className="hidden size-64 rounded-full bg-purple-500/50 blur-3xl drop-shadow-xl lg:block"></span>
-          <span className="hidden lg:block"></span>
+          <div className="grid grid-cols-3">
+            <span className="hidden lg:block"></span>
+            <span className="hidden size-64 rounded-full bg-purple-500/50 blur-3xl drop-shadow-xl lg:block"></span>
+            <span className="hidden lg:block"></span>
+          </div>
         </div>
       </div>
     </div>
