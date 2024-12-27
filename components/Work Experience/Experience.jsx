@@ -23,8 +23,8 @@ const Experience = ({
 
       {/* Description */}
       <div className="mb-5">
-        <div className="z-20 mt-10 flex w-full flex-col-reverse justify-between lg:relative lg:h-60">
-          <div className="flex flex-col justify-end  lg:h-[265px] lg:flex-col ">
+        <div className="z-20 mt-10 flex w-full flex-col-reverse justify-between lg:relative lg:h-60 lg:flex-none">
+          <div className="flex flex-col justify-between lg:h-[265px] lg:flex-col ">
             <p
               className={`lg:absolute ${descLeftOrRight}-0 top-10 z-10 mb-5  rounded-lg  bg-purple-700/30 p-5 text-white backdrop-blur-md lg:w-2/3`}
             >
@@ -57,7 +57,7 @@ const Experience = ({
             />
           </div>
           <span className="hidden size-64 rounded-full bg-purple-500/50 blur-3xl drop-shadow-xl lg:block"></span>
-          <span></span>
+          <span className="hidden lg:block"></span>
         </div>
       </div>
     </div>
